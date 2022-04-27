@@ -18,23 +18,21 @@
         </td>
       </tr>
     </table>
-    <p>type = 
-      <select v-model="typeOfSegmentTree">
-        <option>sum</option>
-        <option>mul</option>
-        <option>min</option>
-        <option>max</option>
+    <p>type : 
+      <select v-model="typeOfSegmentTree" id="segmentTreeOperator">
       </select></p>
     <p>n = <input class="intinput" v-model="n">(1<=n<=64 is recommended)</p>
     <p>A = <input v-model="arr"> <button v-on:click="randomfill">random fill</button></p>
     <button v-on:click="init">initialize</button>
     <p>l = <input class="intinput" v-model="l"> r = <input class="intinput" v-model="r"></p>
-    <button v-on:click="query">query</button>  {{ typeOfSegmentTree }} of [{{ l }}, {{ r }}) = {{ res }}
+    <button v-on:click="query">query</button>  {{ operationName }} of [{{ l }}, {{ r }}) = {{ res }}
     <p>i = <input class="intinput" v-model="i"> x = <input class="intinput" v-model="x"> </p>
     <button v-on:click="update">update</button>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script src="./Monoid.js"></script>
+  <script src="./monoidList.js"></script>
   <script src="test.js"></script>
 </body>
 </html>
