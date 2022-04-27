@@ -17,27 +17,28 @@ const monoidList = {
   ),
   // Multiply Monoid
   "mul": new Monoid(
-    "multiply", (a, b) => a * b, 1
+    // 本当は multiplication product と書かないと厳密じゃないけど product にしてあります
+    "product", (a, b) => a * b, 1
   ),
   // Bitwise Xor Monoid
   "xor": new Monoid(
-    "Xor", (a, b) => (a ^ b), 0
+    "Bitwise Xor", (a, b) => (a ^ b), 0
   ),
   // Bitwise Or Monoid
   "or": new Monoid(
-    "Or", (a, b) => (a | b), 0
+    "Bitwise Or", (a, b) => (a | b), 0
   ),
   // Bitwise And Monoid
   "and": new Monoid(
-    "And", (a, b) => (a & b), 0
+    "Bitwise And", (a, b) => (a & b), 0
   ),
   // Min Monoid
   "min": new Monoid(
-    "Min", (a, b) => a > b ? b : a, Infinity
+    "min", (a, b) => a > b ? b : a, Infinity
   ),
   // Max Monoid
   "max": new Monoid(
-    "Max", (a, b) => a > b ? a : b, -Infinity
+    "max", (a, b) => a > b ? a : b, -Infinity
   ),
   // GCD Monoid
   "gcd": new Monoid(
