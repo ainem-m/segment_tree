@@ -1,7 +1,3 @@
-Original README.md below.
-
----
-
 # いじれるセグ木
 
 [いじれるセグ木](https://ainem-m.github.io/segment_tree/test.html)
