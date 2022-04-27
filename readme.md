@@ -1,6 +1,6 @@
 # いじれるセグ木
 
-https://ainem-m.github.io/segment_tree/test.html
+[いじれるセグ木](https://ainem-m.github.io/segment_tree/test.html)
 うえすぎさん(@takeda_SE)のおかげで公開できました。感謝します。
 競プロerなら一度は憧れるフレーズ「セグ木で殴る」
 憧れ続けてはや1年、機運が高まってきたので
