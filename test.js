@@ -2,6 +2,7 @@ var segTree = new Vue({
   el: '#segTree',
   data: {
     typeOfSegmentTree: 'sum',
+    operationName: "sum",
     n: 4,
     size: 4, //nを2のべき乗にならした数
     rowSize: 3,
@@ -67,6 +68,7 @@ var segTree = new Vue({
       this.n = n;
       this.size = size;
       this.rowSize = Math.ceil(Math.log2(n)) + 1;
+      this.operationName = monoidList[this.typeOfSegmentTree].name
     },
     randomfill: function () {
       // 配列の欠損値を1~9の整数で埋める
