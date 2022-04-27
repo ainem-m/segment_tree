@@ -1,0 +1,17 @@
+table{
+  text-align: center;
+  min-width: 300px;
+}
+td{
+  border:1px black solid;
+  background-color: white;
+  min-width: 30px;
+}
+td.selected{
+  background-color: slateblue;
+  color: white
+}
+.intinput{
+  width: 30px;
+  text-align:center;
+}
