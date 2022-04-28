@@ -20,6 +20,7 @@
     </table>
     <p>type : 
       <select v-model="typeOfSegmentTree" id="segmentTreeOperator">
+        <option v-for="(value, monoid) in monoidList" :key="monoid"> {{ monoid }} </option>
       </select></p>
     <p>n = <input class="intinput" v-model="n">(1<=n<=64 is recommended)</p>
     <p>A = <input v-model="arr"> <button v-on:click="randomfill">random fill</button></p>
