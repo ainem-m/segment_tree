@@ -3,15 +3,15 @@ table{
   min-width: 300px;
 }
 td{
-  border:1px black solid;
+  border: 1px black solid;
   background-color: white;
   min-width: 30px;
 }
 td.selected{
   background-color: slateblue;
-  color: white
+  color: white;
 }
 .intinput{
   width: 30px;
-  text-align:center;
+  text-align: center;
 }
