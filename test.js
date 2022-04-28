@@ -3,6 +3,7 @@ var segTree = new Vue({
   data: {
     typeOfSegmentTree: 'sum',
     operationName: "sum",
+    monoidList: monoidList,
     n: 4,
     size: 4, //nを2のべき乗にならした数
     rowSize: 3,
