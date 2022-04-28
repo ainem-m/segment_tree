@@ -45,13 +45,3 @@ const monoidList = {
     "GCD", (a, b) => gcd(a, b), 0
   )
 }
-
-window.addEventListener("load", () => {
-  // add all option to choose monoids currently available
-  Object.keys(monoidList).forEach(r => {
-    const operatorSelection = document.createElement("option");
-    operatorSelection.innerText = r;
-    document.getElementById("segmentTreeOperator")
-      .appendChild(operatorSelection);
-  });
-});
