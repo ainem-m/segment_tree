@@ -26,8 +26,9 @@ var segTree = new Vue({
     getSizeOfSegmentTree: function (n) {
       // n:Number -> Number
       // n以上の最小の2のべき乗の数を求める
-      var k = Math.log2(n);
-      return 2 ** Math.ceil(k);
+      //var k = Math.log2(n);
+      //return 2 ** Math.ceil(k);
+      return n;
     },
     getRandomInt: function (min, max) {
       // min:Number, max:Number -> Number
@@ -51,7 +52,7 @@ var segTree = new Vue({
       var names = Array(size * 2);
       var selected = Array(size * 2);
       this.resetSelected()
-      values.fill(Number(monoidList[this.typeOfSegmentTree].e))
+      //values.fill(Number(monoidList[this.typeOfSegmentTree].e))
       for (i = 0; i < size; i++) {
         // 最下段に元の値を代入　欠損あれば単位元で埋める
         if (i < n) values[i + size] = args[i] ? args[i] : monoidList[this.typeOfSegmentTree].e;
@@ -59,6 +60,7 @@ var segTree = new Vue({
       }
       for (i = size - 1; i > 0; i--) {
         // 下から二段目から上へ計算
+        if (!names[i*2] || !names[i*2+1] || (Number(names[i*2].at(0) > Number(names[i*2+1].at(-1))))) continue;
         values[i] = monoidList[this.typeOfSegmentTree].op(values[i * 2], values[i * 2 + 1]);
         names[i] = [names[i * 2].at(0), "~", names[i * 2 + 1].at(-1)];
       }
