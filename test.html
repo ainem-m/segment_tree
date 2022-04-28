@@ -11,10 +11,11 @@
   <div id="segTree">
     <table>
       <tr v-for="(row, i) in rowSize">
-        <td :class="{selected: selected[2**i+j]}" v-for="(col, j) in 2**i" v-bind:colspan="size/(2**i)">
-          <strong>{{ names[2**i+j].join('') }}</strong>
+        <td :class="{selected: selected[2**i+j]}" v-for="(col, j) in 2**i" v-bind:colspan="(2 ** Math.ceil(Math.log2(n)))/(2**i)">
+          <span v-if="names[2**i+j]">
+          <strong>{{ names[2**i+j].join(" ") }}</strong>
           <p>{{ getValue(2**i+j) }}</p>
-          <!--<p>{{ values[2**i+j]!=Number.POSITIVE_INFINITY ? values[2**i+j]!=Number.NEGATIVE_INFINITY ? values[2**i+j] : '-∞' : '∞' }}</p>-->
+          </span>
         </td>
       </tr>
     </table>
