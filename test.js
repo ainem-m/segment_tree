@@ -124,7 +124,16 @@ var segTree = new Vue({
         setTimeout(() => { loop(l, r, tmp) }, this.DELAY);
       }
       var tmp = monoidList[this.typeOfSegmentTree].e;
-      var l = Number(this.l) - 1; var r = Number(this.r) - 1;
+      if (Number(this.l) < 1 || Number(this.l) > Number(this.r)) {
+        this.l = 1;
+        console.log("l must be less than r and more than 0");
+      }
+      if (Number(this.r) > this.n+1) {
+        this.r = this.n+1;
+        console.log("r must be less than n")
+      }
+      var l = Number(this.l) - 1;
+      var r = Number(this.r) - 1;
       // 配列の添字からセグ木配列の添字に変換
       l += this.size;
       r += this.size;
